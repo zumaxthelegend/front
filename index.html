@@ -127,29 +127,31 @@
 			<div class="title">
 				<h2>Этапы проекта</h2>
 			</div>
-			<div class="list">
-				<div class="item">
-					<div class="name" data-number="01">
-						<h2>Аудит текущей<br> ситуации</h2>
+			<div class="slider">
+				<div class="list owl-carousel">
+					<div class="item">
+						<div class="name" data-number="01">
+							<h2>Аудит текущей<br> ситуации</h2>
+						</div>
+						<div class="text">
+							<p>Для начала мы определим на<br> каком этапе Вы сейчас,<br> как выстроены продажи и<br> какие инструменты вы используете.</p>
+						</div>
 					</div>
-					<div class="text">
-						<p>Для начала мы определим на<br> каком этапе Вы сейчас,<br> как выстроены продажи и<br> какие инструменты вы используете.</p>
+					<div class="item">
+						<div class="name" data-number="02">
+							<h2>Предложение<br> решений</h2>
+						</div>
+						<div class="text">
+							<p>На основе полученной<br> информации мы предлагаем<br> решение, которое подойдет<br> именно вам.</p>
+						</div>
 					</div>
-				</div>
-				<div class="item">
-					<div class="name" data-number="02">
-						<h2>Предложение<br> решений</h2>
-					</div>
-					<div class="text">
-						<p>На основе полученной<br> информации мы предлагаем<br> решение, которое подойдет<br> именно вам.</p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="name" data-number="03">
-						<h2>Согласование<br> и подписание договора</h2>
-					</div>
-					<div class="text">
-						<p>Мы подготовим договор<br> и смету, в которой подробны<br> описаны сроки и этапы работы.</p>
+					<div class="item">
+						<div class="name" data-number="03">
+							<h2>Согласование<br> и подписание договора</h2>
+						</div>
+						<div class="text">
+							<p>Мы подготовим договор<br> и смету, в которой подробны<br> описаны сроки и этапы работы.</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -247,6 +249,12 @@
 				items:1, 
 				nav: true
 			});
+
+			$("#stages .owl-carousel").owlCarousel({
+				items: 3, // Слайдер делает по-умолчанию ширину итемам по 33% ( 50% если 2 итема, ну 100 / 2 и т.д.) 
+				nav: true
+			});
+
 			$('.burger').click(function(){ // клик на див с классом бургер (ну та хуйня в меню)
 			$(this).toggleClass('active'); // переключаем класс тому куда кликнули
 			$('#menu').toggleClass('active'); // переключаем класс менюхе
