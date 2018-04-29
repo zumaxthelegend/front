@@ -765,7 +765,9 @@ img {
 		text-align: left;
 		color: #0f63fe;
 		text-align: center;	}
-
+	#footer {
+		padding: 50px 0;
+	}
 	#footer .bottom  {
 		display: flex;
 		padding-top: 53px;
