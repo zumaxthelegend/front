@@ -767,6 +767,7 @@ img {
 		text-align: center;	}
 	#footer {
 		padding: 50px 0;
+		color: red;
 	}
 	#footer .bottom  {
 		display: flex;
