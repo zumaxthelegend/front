@@ -580,7 +580,6 @@ img {
 	padding-top: 95px;
 	height: 653px;
 }
-
 	#stages .container {
 		position: relative;
 	}
@@ -647,7 +646,31 @@ img {
 		letter-spacing: normal;
 		text-align: left;
 		color: #1a3c7c;
-		margin-bottom: 143px; }
+		margin-bottom: 143px; /* это че за поебота */
+	}
+	#stages .owl-nav {
+		display: flex;
+		justify-content: flex-end;
+	}
+	#stages .owl-nav .owl-prev,
+	#stages .owl-nav .owl-next {
+		text-indent: -9999px; /* Убираем любой текст с кнопки, чтобы осталось только изображение */
+		width: 40px; 
+		height: 40px; /* я от балды просто написал */
+	}
+	#stages .owl-nav .owl-next {
+		background: url(images/next.png) 0 0 no-repeat;
+	}
+	#stages .owl-nav .owl-prev {
+		background: url(images/next.png) 0 0 no-repeat;
+		transform: rotate(180deg); /* тут получается вырезаешь просто NEXT и разворачиваешь его на 180гр. */
+	}
+
+	#stages .owl-nav .owl-next.disabled, /* Тут стили для кнопок, когда они отключены (то есть некуда листать, слайдер закончился) */
+	#stages .owl-nav .owl-prev.disabled {
+		opacity: .7;
+		cursor: default; /* Дефолтный курсор (просто курсор :) ) */
+	}
 
 #results {
 	height: 539px;
