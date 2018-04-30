@@ -367,9 +367,6 @@
 
 
 		jQuery(document).ready(function($){
-			$("#popup-slider .right").mCustomScrollbar({
-				theme:"minimal"
-			});
 			var owl = $("#project_list .owl-carousel").owlCarousel({
 				items:1, 
 				nav: true
@@ -398,14 +395,14 @@
 				var height = $("#popup-slider .slide#" + slide + " .left").height();
 				console.log(height);
 				$("#popup-slider .slide#" + slide + " .right").height(height);
-				$("#popup-slider .left").mCustomScrollbar({
+				$("#popup-slider .left, #popup-slider .right").mCustomScrollbar({
 					theme:"minimal-dark"
 				});
 				$("#popup-slider, popup-content").toggleClass("active");
 			});
 
 			$(".close, #popup-slider").on("click", function(){ // Почему просто .close? Если у тебя в попапе с формой будет такой же класс, ты будешь одновременно потом всё закрывать и форму и попап из слайдера
-				$('#popup-slider .slide.active .left').mCustomScrollbar('destroy');
+				$('#popup-slider .left, #popup-slider .right').mCustomScrollbar('destroy');
 				$("#popup-slider, .popup-content, #popup-slider .slide").removeClass("active");
 			});
 
