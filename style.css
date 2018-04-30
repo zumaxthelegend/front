@@ -65,13 +65,32 @@ img {
 		text-align: left;
 		color: #1a3c7c;
 		text-decoration: none;
+		display: inline-block;
 	}
+
+	#menu .wrapper ul li a:after {
+		background-color: #1a3c7c;
+	    display: block;
+	    content: "";
+	    height: 2px;
+	    width: 0%;
+	    -webkit-transition: width .3s ease-in-out;
+	    -moz--transition: width .3s ease-in-out;
+	    transition: width .3s ease-in-out;
+	}		
+
+	#menu .wrapper ul li a:hover:after,
+	#menu .wrapper ul li a:focus:after {
+   		width: 100%;
+	}
+
 
 	#menu .wrapper .phone {
 		padding-top: 35px;
 	}
 
 	#menu .wrapper .phone a {
+		display: inline-block;
 		font-size: 24px;
 		font-weight: 500;
 		line-height: 1.42;
@@ -81,6 +100,22 @@ img {
 		text-decoration: none;
 	}
 	
+	#menu .wrapper .phone a:after {
+		background-color: #1a3c7c;
+	    display: block;
+	    content: "";
+	    height: 2px;
+	    width: 0%;
+	    -webkit-transition: width .3s ease-in-out;
+	    -moz--transition: width .3s ease-in-out;
+	    transition: width .3s ease-in-out;
+	}		
+
+	#menu .wrapper .phone a:hover:after,
+	#menu .wrapper .phone a:focus:after {
+   		width: 100%;
+	}
+
 	#menu .wrapper .btn_menu {
 		margin-top: 57px;
 		vertical-align: top;
