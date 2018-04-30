@@ -385,8 +385,9 @@
 		});
 
 			$('.burger').click(function(){ 
-			$(this).toggleClass('active'); 
-			$('#menu').toggleClass('active'); 
+				$(this).toggleClass('active'); 
+				$('#menu').toggleClass('active'); 
+				$('body').toggleClass('noscoll'); 
 			});
 
 			$(".btn-slider").on("click", function(){
@@ -398,12 +399,14 @@
 				$("#popup-slider .left, #popup-slider .right").mCustomScrollbar({
 					theme:"minimal-dark"
 				});
+				$('body').toggleClass('noscoll'); 
 				$("#popup-slider, popup-content").toggleClass("active");
 			});
 
 			$(".close, #popup-slider").on("click", function(){ // Почему просто .close? Если у тебя в попапе с формой будет такой же класс, ты будешь одновременно потом всё закрывать и форму и попап из слайдера
 				$('#popup-slider .left, #popup-slider .right').mCustomScrollbar('destroy');
 				$("#popup-slider, .popup-content, #popup-slider .slide").removeClass("active");
+				$('body').removeClass('noscoll'); 
 			});
 
 			// шоб не закрывался попап при клике на контент попапа

@@ -5,6 +5,8 @@
 body {
   background-color: #ffffff; }
 
+body.noscroll { overflow: hidden; }
+
 body, input, textarea {
   font-family: 'Gotham Pro'; }
 
