@@ -106,7 +106,7 @@
 								<div class="name">Идея</div>
 								<div class="text">Минимализм</div>
 							</div>
-							<div class="btn">Смотреть проект</div>
+							<div class="btn-slider" data-slide="slide-3">Смотреть проект</div>
 						</div>
 					</div>
 				</div>
@@ -354,6 +354,29 @@
 					<div class="img"><img src="images/popup-img.png" alt=""></div>
 				</div>
 			</div>
+			<div class="slide" id="slide-3">
+				<div class="left">
+					<div class="wrapper">
+						<div class="name">Промо-сайт для<br> ActiveDictionary</div>
+					</div>
+					<div class="list">
+						<h2>1. Задача</h2>
+						<h2>1. Задача</h2>
+						<p>Прозрачность процессов (Мы<br> приглашаем Вас в таск-менеджер и Вы<br> становитесь участником процесса. Вы<br> сможете контролировать сроки и писать<br> комментарии.)</p>
+						<h3>1. Задача</h3>
+						<h3>1. Задача</h3>
+						<p>Прозрачность процессов (Мы<br> приглашаем Вас в таск-менеджер и Вы<br> становитесь участником процесса. Вы<br> сможете контролировать сроки и писать<br> комментарии.)</p>
+					</div>							
+						<div class="btn">ОБСУДИТЬ ВАШУ ЗАДАЧУ</div>
+				</div>
+				<div class="right">
+					<div class="img"><img src="images/popup-img.png" alt=""><p>Прозрачность процессов (Мы<br> приглашаем Вас в таск-менеджер и Вы<br> становитесь участником процесса. Вы<br> сможете контролировать сроки и писать<br> комментарии.)</p></div>
+					<div class="img"><img src="images/popup-img.png" alt=""></div>
+					<div class="img"><img src="images/popup-img.png" alt=""></div>
+					<div class="img"><img src="images/popup-img.png" alt=""></div>
+					<div class="img"><img src="images/popup-img.png" alt=""></div>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -403,7 +426,7 @@
 				$("#popup-slider, popup-content").toggleClass("active");
 			});
 
-			$(".close, #popup-slider").on("click", function(){ // Почему просто .close? Если у тебя в попапе с формой будет такой же класс, ты будешь одновременно потом всё закрывать и форму и попап из слайдера
+			$("#popup-slider .close, #popup-slider").on("click", function(){ 
 				$('#popup-slider .left, #popup-slider .right').mCustomScrollbar('destroy');
 				$("#popup-slider, .popup-content, #popup-slider .slide").removeClass("active");
 				$('body').removeClass('noscroll'); 
