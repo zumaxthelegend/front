@@ -1,0 +1,524 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+/*===============  Base  ===============*/
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	background: url(../images/body-bg.png) center center no-repeat
+	background-size: cover
+	margin: 0
+	width: 100%
+	height: 100%
+
+.site
+	display: flex
+	flex-direction: column
+	height: 100%
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+header
+	position: fixed
+	top: 0
+	width: 100%
+	z-index: 1000
+
+
+	.container-header
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		align-items: center
+		max-width: 1330px
+		padding: 0 85px
+		position: relative
+		margin: 0 auto
+		height: 68px
+		padding-top: 20px
+		margin-bottom: 132px
+
+
+		.site-nav
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: center
+			align-items: center
+
+			.burger
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				position: relative
+				align-items: center
+				justify-content: center
+				+tr(300ms)
+
+				&:hover
+					.wrapper
+						width: 40px
+					.middle
+						transform: translateX(12px)
+					p
+						visibility: visible
+
+				.wrapper
+					display: block
+					width: 16px
+					height: 32px
+					position: relative
+					vertical-align: center
+					+tr(300ms)
+
+
+				.top
+					display: block
+					text-align: center
+
+					.top-left
+						display: block
+						position: absolute
+						width: 	8px
+						height: 8px
+						border-top: 4px solid #ffffff
+						border-left: 4px solid #ffffff
+						left: 0
+						top: 0
+						
+					.top-right
+						display: block
+						position: absolute
+						width: 	8px
+						height: 8px
+						border-top: 4px solid #ffffff
+						border-right: 4px solid #ffffff
+						right: 0
+						top: 0
+						+tr(300ms)
+				
+				.middle
+					position: absolute
+					display: block
+					width: 16px
+					height: 8px
+					background-color: #ffffff
+					top: 12px
+					+tr(300ms)
+
+				.bottom
+					display: block
+					text-align: center
+
+					.bottom-left
+						display: block
+						position: absolute
+						width: 	8px
+						height: 8px
+						border-bottom: 4px solid #ffffff
+						border-left: 4px solid #ffffff
+						left: 0
+						bottom: 0
+					
+					.bottom-right
+						display: block
+						position: absolute
+						width: 	8px
+						height: 8px
+						border-bottom: 4px solid #ffffff
+						border-right: 4px solid #ffffff
+						right: 0
+						bottom: 0
+
+				p
+					display: inline-block
+					+fz(11)
+					color: #ffffff
+					font-weight: 900
+					letter-spacing: 1.1px
+					text-transform: uppercase
+					line-height: 1.2
+					text-align: left
+					margin-left: 15px
+					margin-top: 0
+					margin-bottom: 0
+					visibility: hidden
+					+tr(300ms)
+
+
+
+	.logo a
+		display: block
+		background: url(../images/site-logo.png)
+		width: 120px
+		height: 33px
+		padding-top: 8px
+
+	.order-btn
+		display: block
+		text-align: center
+		width: 200px
+		height: 48px
+		background-color: #ffffff 
+		+fz(11)
+		font-weight: 900
+		line-height: 48px
+		letter-spacing: 1.1px
+		color: #333333
+		text-transform: uppercase
+		cursor: pointer
+
+
+.site
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+
+	.site-primary
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		position: relative
+
+		.slider-nav
+			position: fixed
+			width: 48px
+			right: 0
+			display: block
+			text-align: center
+			
+			.arrows
+				display: block
+
+				.slick-disabled
+					opacity: .3
+					cursor: disable
+
+				.right
+					display: inline-block
+					background-image: url(../images/next-arrow.png)
+					width: 48px
+					height: 48px
+					cursor: pointer
+
+				.left
+					display: inline-block
+					background-image: url(../images/prev-arrow.png)
+					width: 48px
+					height: 48px
+					cursor: pointer
+		.dots
+			display: block
+			left: 0
+			position: fixed
+			height: 40%
+
+			p
+				display: block
+				left: 0
+				writing-mode: vertical-rl
+				transform: rotate(180deg)
+				margin-left: 35px
+				color: #ffffff
+				+fz(11)
+				font-weight: 900
+				text-transform: uppercase
+				letter-spacing: 1.1px
+				padding-bottom: 24px
+
+			.slider-dots 
+				position: fixed
+				display: block
+				left: 0
+				text-align: center
+
+				.slick-dots
+					padding: 0
+					margin-left: 40px
+					list-style: none
+
+					li
+						line-height: 0
+						margin-bottom: 8px
+
+						button
+							width: 8px
+							height: 8px
+							border: 1px solid #ffffff
+							background: none
+							opacity: 0.85
+							font-size: 0
+							cursor: pointer 
+							padding: 0
+
+						&.slick-active
+							button
+								background-color: #fff
+
+						
+		.site-content
+			width: 100%
+			height: 100%
+
+			.slick-list
+				display: block
+				text-align: center
+
+
+				.slide
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					justify-content: center
+					align-items: center
+					flex-direction: column
+					max-height: 584px
+					position: relative
+					outline: none;
+
+					.slick-slide
+						max-width: 987px;
+						width: 100%;
+						max-height: 602px;
+						margin-top: 200px;
+						margin-bottom: 182px;
+
+					.top
+						display: block
+						position: relative
+						height: 84px
+						max-width: 984px
+						width: 100%
+						margin-bottom: 105px	
+					
+						.top-left
+							position: absolute
+							width: 84px
+							height: 84px
+							border-top: 32px solid #ffffff
+							border-left: 32px solid #ffffff
+							top: 0
+							left: 0
+
+						p
+							+fz(23)
+							font-weight: 300
+							line-height: normal
+							letter-spacing: 0.5px
+							text-align: left
+							color: #ffffff
+							text-transform: uppercase
+							float: right
+							padding-right: 100px
+
+						.top-right
+							position: absolute
+							width: 84px
+							height: 84px
+							border-top: 32px solid #ffffff
+							border-right: 32px solid #ffffff
+							top: 0
+							right: 0
+			 
+					.middle
+						background: url(../images/logo-big.png) center center no-repeat
+						height: 205px
+						width: 757px
+
+					.bottom
+						display: block
+						position: relative
+						height: 84px
+						max-width: 984px
+						width: 100%
+						margin-top: 105px
+
+						.bottom-left
+							position: absolute
+							width: 84px
+							height: 84px
+							border-bottom: 32px solid #ffffff
+							border-left: 32px solid #ffffff
+							bottom: 0
+							left: 0	
+
+						p
+							+fz(23)
+							font-weight: 300
+							line-height: normal
+							letter-spacing: 0.5px
+							text-align: left
+							color: #ffffff
+							text-transform: uppercase
+							float: left
+							position: absolute
+							bottom: 0
+							padding-left: 100px
+							margin: 0
+
+							span
+								text-decoration: underline
+
+						.bottom-right
+							position: absolute
+							width: 84px
+							height: 84px
+							border-bottom: 32px solid #ffffff
+							border-right: 32px solid #ffffff
+							bottom: 0
+							right: 0
+
+
+
+footer
+	position: fixed
+	bottom: 0
+	width: 100%
+	z-index: 1000 			
+
+	.container-footer
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		align-items: center
+		max-width: 1330px
+		padding: 0 84px
+		position: relative
+		margin: 0 auto
+		height: 68px
+		padding-bottom: 30px
+
+		.mail a
+			+fz(16)
+			font-weight: normal
+			font-style: normal
+			line-height: normal
+			letter-spacing: 0.7px
+			text-align: left
+			color: #ffffff
+			text-decoration: none
+		
+		.socials
+			display: block
+			position: relative
+
+			a
+				margin-left: 16px
+
+			a.youtube
+				display: inline-block
+				background: url(../images/youtube.png) 0 0 no-repeat
+				opacity: .5
+				width: 24px
+				height: 24px
+				+tr(300ms)
+
+				&:hover
+					opacity: 1
+
+			a.vk
+				display: inline-block
+				background: url(../images/vk.png) 0 0 no-repeat
+				opacity: .5
+				width: 24px
+				height: 24px
+				+tr(300ms)
+
+				&:hover
+					opacity: 1
+
+			a.fb
+				display: inline-block
+				background: url(../images/fb.png) 0 0 no-repeat
+				opacity: .5
+				width: 24px
+				height: 24px
+				+tr(300ms)
+
+				&:hover
+					opacity: 1
+
+
+
+.fadeInRight
+	animation-delay: 1s
+
+.fadeInLeft
+	animation-delay: 2s
+
+
+
+
+
+
+@import "header"
+@import "layout"
+@import "footer"
+@import "media" // Всегда в конце
