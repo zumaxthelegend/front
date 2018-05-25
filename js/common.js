@@ -37,4 +37,17 @@ $(document).ready(function() {
 		$(this).slick('slickPrev');
 		}
 	}));
+
+	$('.elements-grid').masonry({
+		itemSelector: '.element-item',
+		columnWidth: '.element-item',
+		percentPosition: true,
+		gutter: 8
+	});
+	$('.projects').mCustomScrollbar({
+		theme: "projects"
+	});
+	$('.text-about').mCustomScrollbar({
+		theme: "text-about"
+	});
 });
