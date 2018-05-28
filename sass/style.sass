@@ -872,7 +872,96 @@ header
 											right: 0
 											bottom: 0
 
-										
+						&.slide_05
+							.our-team
+								display: -webkit-flex
+								display: -moz-flex
+								display: -ms-flex
+								display: -o-flex
+								display: flex
+								justify-content: center
+								align-items: center
+								flex-direction: column
+								height: 819px
+								background: url(../images/team.svg) center center no-repeat
+								position: relative
+								.top
+									display: block
+									height: 96px
+									.top-left
+										display: block
+										position: absolute
+										width: 	80px
+										height: 80px
+										border-top: 8px solid #ffffff
+										border-left: 8px solid #ffffff
+										left: 0
+										top: 0
+										margin: 16px 0 0 16px
+									.top-right
+										display: block
+										position: absolute
+										width: 	80px
+										height: 80px
+										border-top: 8px solid #ffffff
+										border-right: 8px solid #ffffff
+										right: 0
+										top: 0
+										margin: 16px 16px 0 0
+								.middle
+									height: 621px
+									width: 100%
+									display: block
+									.team-member-1
+										top: 37px
+										right: 104px
+										display: block
+										position: absolute
+										max-width: 400px
+										width: 100%
+										height: 320px
+										visibility: hidden
+										&:hover
+											visibility: visible
+											background: rgba(0, 0, 0, .15)
+
+								.bottom
+									display: block
+									.bottom-left
+										display: block
+										position: absolute
+										width: 	80px
+										height: 80px
+										border-bottom: 8px solid #ffffff
+										border-left: 8px solid #ffffff
+										left: 0
+										bottom: 0
+										margin: 0 0 16px 16px
+									.our-team-btn
+										display: block
+										width: 210px
+										height: 58px
+										box-shadow: 0 0 6px rgba(19, 43, 55, 0.25)
+										background-color: #ffffff
+										cursor: pointer
+										color: #333333
+										+fz(11)
+										+lh(11, 58)
+										font-weight: 900
+										text-transform: uppercase
+										letter-spacing: 1.1px
+										margin-bottom: 17px
+									.bottom-right
+										display: block
+										position: absolute
+										width: 	80px
+										height: 80px
+										border-bottom: 8px solid #ffffff
+										border-right: 8px solid #ffffff
+										right: 0
+										bottom: 0
+										margin: 0 16px 16px 0
+
 
 
 
@@ -975,6 +1064,8 @@ footer
 	background-color: #383434
 	opacity: 0.1
 
+
+.filter
 
 @import "header"
 @import "layout"
